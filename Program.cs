@@ -4,31 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrimeNumber
+namespace FibonacciSeries
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number to check Prime");
-            int num,temp=0;
-            num = int.Parse(Console.ReadLine());
-            for(int i = 2; i<num-1;i++)
-            {
-                if (num % i == 0)
-                    temp = temp + 1;
+            int a = 0, b = 1,c;
+            Console.WriteLine(a+" "+b);
+          
+            while((c = a + b) < 100)
+            {          
+                Console.WriteLine(" "+c);
+                a = b;
+                b = c;
             }
-            if (temp > 0)
-            {
-
-                Console.WriteLine("Not Prime");
-            }
-            else
-            {
-                Console.WriteLine("Prime");
-            }
-            Console.ReadKey();
-                    
+            Console.ReadLine(); 
         }
     }
 }
